@@ -1,0 +1,7 @@
+---
+exclude: ['README.markdown']
+permalink: ':title'
+highlighter: rouge
+host: 0.0.0.0
+safe: false
+title: 'Keno Antigen'
