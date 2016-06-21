@@ -1,2 +1,2 @@
-docker build -t ka-api-docs .
+docker build -t kenoantigen/ka-api-docs .
 
