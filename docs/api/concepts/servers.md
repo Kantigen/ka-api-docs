@@ -16,6 +16,5 @@ Currently there is only one server for each of the following functions.
 * **User Administration** - registration, logging in, user settings.
 * **Chat** - real-time chat system
 * **Game** - general game mechanics
-* **Arena** - real-time views on individual battles
 
 More details to follow...

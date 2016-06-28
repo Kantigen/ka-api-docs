@@ -7,14 +7,13 @@ title: Start
 {% include section_title.html title="Architecture" %}
 
 There are two main components, the Server code written predominantly in Perl
-and the client code written in Javascript (using ReactJS). In addition user
-code can be run on the servers in Docker containers. This allows user code
-to be written in a variety of languages (Javascript, Perl, Ruby, Python)
-but in a secure manner.
+and the client code written in Javascript (using ReactJS). In addition users
+can use the same API that the client and server use to run their own code.
+(One option we are looking at is allowing users to run their code on the
+KA servers, in docker containers) 
 
 The Client code is a single-page-app which communicates through a Web-Socket
-API to the server. The user code running in docker containers also
-communicates via web-sockets.
+API to the server. 
 
 Since the API is open-source then this offers the opportunity for third-party
 clients to be written which can be used to drive a users empire.
@@ -22,8 +21,8 @@ clients to be written which can be used to drive a users empire.
 
 {% include section_title.html title="Web Sockets" %}
 
-Keno Antigen uses Web Socket technology. This offers significant
-advantages over HTTP requests, such as AJAX calls using HTTP.
+Web Sockets offer significant advantages over HTTP requests, such as AJAX calls 
+using HTTP.
 
   * The overhead for each request is much smaller. An AJAX call could easily 
 have 1200 bytes of header for a simple 8 bytes of data. The same data for a 
@@ -36,8 +35,8 @@ to resort to frequent polling or similar techniques.
 making it much faster and cheaper. We can then scale out horizontally,
 providing more power at a cheaper cost.
 
-The downside is that client code needs to be asynchronous, but this is common
-requirement for Javascript and we can provide libraries for other languages 
+The downside is that client code needs to be asynchronous, but this is a common
+technique for Javascript and we can provide libraries for other languages 
 such as Perl.
 
 
@@ -48,7 +47,7 @@ example the following represents a client Login request.
 
 {% highlight JSON %}
 {
-  "route"       : "/login",
+  "route"       : "/user/login",
   "msgId"       : "123",
   "clientCode"  : "1b4e28ba-2fa1-11d2-883f-0016d3cca427",
   "content" : {
@@ -73,7 +72,7 @@ implemented by an incrementing number in the client. For example, if there
 are multiple requests to the same route the client can match the multiple
 server responses by the **msgId**.
 
-If the msgId is not supplied the server will not include a msgId in it's response.
+If the msgId is not supplied to the server it will not include a msgId in it's response.
 
 If it is a server initiated message (for example a 'welcome' message) then
 no **msgId** will be included.
@@ -140,26 +139,24 @@ current status. It may also send an update whenever the server status changes.
 {% highlight JSON %}
 {
   "route"       : "/welcome",
+  "status"      : 0,
+  "message"     : "OK",
   "content" : {
-    "code"        : 0,
-    "message"     : "Welcome to the Keno Antigen game server.",
-    "data"        : {
-      "alert"           : "Server will go off-line shortly",
-      "offlineSeconds"  : "3060"
-    }
+    "alert"           : "Server will go off-line shortly",
+    "offlineSeconds"  : "3060"
   }
 }
 {% endhighlight %}
 
-### code
+### status
 
-The status of the **server** where **0** represents success.
+The status of the connection, where **0** represents success.
 
 ### message
 
 A human readable message.
 
-### data
+<h3>content</h3>
 
 Optional additional information, TODO (example is indicative)
 
@@ -183,30 +180,29 @@ described here and referred to as a **Standard Response**
 {
   "route"       : "/{some_route}",
   "msgId"       : "123",
+  "status"      : 0,
+  "message"     : "OK",
   "content"     : {
-    "code"          : 0,
-    "message"       : "Success",
-    "data"          : {
-      "example"       : "Some value"
-    }
+    "example"       : "Some value"
   }
 }
 {% endhighlight %}
 
-### code
+### status
 
 The status of the **server** where **0** represents success, any other value represents failure.
+
+### message
+
+A human readable message.
 
 ### msgId
 
 Where provided in the Client request, the same **msgId** will be returned in the Server response.
 If not provided, this field will not be supplied.
 
-### message
 
-A human readable message.
-
-### data
+<h3>content</h3>
 
 Optional additional information. This will be described in the relevant section of the API
 documentation.
