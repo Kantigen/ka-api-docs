@@ -9,7 +9,7 @@ This route provides functions to display and manipulate the starmap.
 
 All routes are prefixed with **/starmap/**
 
-{% include section_header.html title="Get Star Map" method="CLIENT" url="/starmap/get_map_chunk" %}
+{% include section_header.html title="Get Map Chunk" method="CLIENT" url="/starmap/get_map_chunk" %}
 
 
 {% highlight JSON %}
@@ -18,6 +18,7 @@ All routes are prefixed with **/starmap/**
   "msgId"           : 123,
   "clientCode"      : "1b4e28ba-2fa1-11d2-883f-0016d3cca427",
   "content"         : {
+    "sector"          : 0,
     "left"            : -50,
     "bottom"          : 250
   }
@@ -29,8 +30,10 @@ values must lie on the map co-ordinates modulus 50. The above call will request 
 chunk of the starmap data from x co-ordinates -50 to -1 (inclusive) and y
 co-ordinates 250 to 299 inclusive.
 
+The **sector** is the map sector to be used.
 
-{% include section_header.html title="Get Star Map" method="SERVER" url="/starmap/get_map_chunk" %}
+
+{% include section_header.html title="Get Map Chunk" method="SERVER" url="/starmap/get_map_chunk" %}
 
 This is the async response of the server to the client **/starmap/get_map_chunk** request.
 
