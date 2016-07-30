@@ -594,6 +594,15 @@ code {
   background: #119bdf;
 }
 
+/* MESSAGE */
+#content article.MESSAGE a h2 code {
+  color: #e02a10;
+}
+
+#content article.MESSAGE a h2 code b {
+  background: #e02a10;
+}
+
 /* SERVER */
 #content article.SERVER a h2 code {
   color: #52ce0e;
