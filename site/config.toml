@@ -1,0 +1,26 @@
+title = "Keno Antigen"
+baseurl = "http://kenoantigen.com"
+MetaDataFormat = "yaml"
+pluralizeListTitles = false
+
+[blackfriday]
+  plainIDAnchors = true
+
+[params]
+  description = "Keno Antigen. A community version of Lacuna Expanse"
+  author = "Keno Antigen Community"
+
+[taxonomies]
+  tag = "tags"
+  group = "groups"
+
+[[menu.main]]
+    name = "About KA"
+    identifier = "about"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 10
+[[menu.main]]
+    name = "Getting Started"
+    identifier = "getting started"
+    pre = "<i class='fa fa-road'></i>"
+    weight = 20

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ken&oacute; Antigen. A community project based on Lacuna Expanse">
+    <meta name="author" content="The Ken&oacute; Antigen Community">
+    <title>Ken&oacute; Antigen</title>
+
+    {{ "<!--icon for browser shortcuts-->" | safeHTML }}
+
+    {{ "<!--icon to represent this web page on Apple iOS-->" | safeHTML }}
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    {{ "<!--Bootstrap core CSS-->" | safeHTML }}
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-stripped-gohugo.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-additions-gohugo.css">
+
+    {{ "<!--non-Bootstrap CSS (keep below Bootstrap CSS)-->" | safeHTML }}
+    <link rel="stylesheet" type="text/css" href="/vendor/OwlCarousel2/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/OwlCarousel2/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arbutus+Slab%7CCabin:600%7CSource+Code+Pro">
+    <link rel="stylesheet" type="text/css" href="/css/hugofont.css">
+    <link rel="stylesheet" type="text/css" href="/css/home-page-auroral.css">
+    <link rel="stylesheet" type="text/css" href="/css/home-page-styles.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+  </head>
+  <body>
+
+    {{ "<!--full page image header area start-->" | safeHTML }}
+    <div id="top" class="header">
+      <div id="background-container">
+        <div class="auroral-northern"></div>
+        <div class="auroral-stars"></div>
+      </div>
+
+      <div id="container">
+
+        <div class="vert-text">
+          <a href="#intro">
+              <img class="logo" src="/image/logo.png" alt="Ken&oacute; Antigen logo">
+          </a>
+      <h1>Ken&oacute; Antigen</h1>
+
+      <p class="emphasis">
+        Coming Soon
+      </p>
+
+      <p class="extra-padded-paragraph">
+        A community funded and developed version of the game The Lacuna Expanse.
+      </p>
+
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form
+          action="//kenoantigen.us13.list-manage.com/subscribe/post?u=50dbd71d24b9583df7701482a&amp;id=7596dea4a0"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
+            <div id="mc_embed_signup_scroll">
+              <p class="emphasis">
+                Keep up with the latest developments
+              </p>
+
+              <div class="mc-field-group">
+                <input
+                  type="email"
+                  value=""
+                  name="EMAIL"
+                  class="required email"
+                  id="mce-EMAIL"
+                  placeholder="Enter email"
+                >
+
+                <br />
+
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                  class="button"
+                >
+              </div>
+            </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+          <br/>
+          <div class="buttonbox">
+              <a class="btn-primary btn btn-lg" href="/overview/introduction/">
+                  API <i class="icon-idea"></i>
+              </a>
+              <a class="btn-repo btn btn-lg" href="https://github.com/Kantigen">
+                  GitHub <i class="icon-circlestar"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{ "<!--JavaScript: Keep at the end of the document so the page loads faster-->" | safeHTML }}
+  <script src="/vendor/jquery/js/jquery-2.1.4.min.js"></script>
+
+  {{ "<!--Bootstrap core JavaScript here-->" | safeHTML }}
+  {{ `<!--<script src="/vendor/twitter/js/bootstrap.min.js"></script>-->` | safeHTML }}
+
+  <script src="/vendor/OwlCarousel2/js/owl.carousel.min.js"></script>
+  <script src="/js/owl.carousel-custom.js"></script>
+
+  {{ "<!--custom JavaScript-->" | safeHTML }}
+  <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+              || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+  </script>
+
+  </body>
+</html>

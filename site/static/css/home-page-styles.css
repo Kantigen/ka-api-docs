@@ -1,0 +1,115 @@
+
+@font-face {
+  font-family: 'Nasalization';
+  src: url('fonts/nasalization.ttf');
+}
+
+body {
+  font-family: 'Nasalization', 'sans serif';
+  font-size: 26px;
+  background-color: #161515;
+  color: #ffffff;
+
+  /* Minor aesthetic details */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+#background-container {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#container {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Desktop */
+@media (min-width: 600px) and (min-height: 500px) {
+  #container {
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    height: 500px;
+  }
+}
+
+#mce-EMAIL {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Nasalization', 'sans serif';
+  font-size: 26px;
+  outline: none;
+  border: none;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+#mc-embedded-subscribe {
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  font-family: 'Nasalization', 'sans serif';
+  font-size: 26px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#mc-embedded-subscribe:hover {
+  text-decoration: underline;
+}
+
+.emphasis {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.extra-padded-paragraph {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ffffff;
+    opacity: 0.9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ffffff;
+   opacity: 0.9;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #ffffff;
+   opacity: 0.9;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ffffff;
+   opacity: 0.9;
+}
+
+/* Shitty iOS button styling fix */
+button, input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}

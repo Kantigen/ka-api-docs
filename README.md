@@ -1,29 +1,28 @@
-# Keno Antigen Web Socket API documentation
+# Keno Antigen Web Socket API Documentation
 
-This is the documentation for the Keno Antigen Web Socket API.
+This is the web site and documentation for Keno Antigen Web Socket API.
 
-Documentation is run from a Jekyll implementation in a Docker container which should
-make it much easier to install.
+The site is run from a Hugo implementation in a Docker container.
 
 # install
 
 The Docker container does not need to be built, it can be
 downloaded automatically from docker-hub.
 
-However, if you change (for example package.json) then it 
-can be built thus.
+However if you make changes to the build process then it can be
+rebuilt thus.
 
 ```bash
 $ ./build_docker.sh
 ```
 
-Then run a shell in the container and run the jekyll server
+Then run a shell in the container and run the hugo server
 
 
 ```bash
 $ ./run_docker.sh
-root@17d2ed3096e5:/docs# jekyll serve
+root@17d2ed3096e5:/docs# hugo server -w --bind=0.0.0.0 -b http://kenoantigen.com
 ```
 
-This will expose the jekyll documentation on your local server, port 4000
+This will expose the API Documentaion on your local server, port 4000
 
