@@ -49,7 +49,7 @@ such as Perl.
 Messages both to, and from, the Server are in JSON encoded strings. For
 example the following represents a client Login request.
 
-{{< highlight json >}}
+```json
 {
   "route"       : "/user/login",
   "msgId"       : "123",
@@ -59,8 +59,7 @@ example the following represents a client Login request.
     "password"      : "top5ecr3t"
   }
 }
-{{< /highlight >}}
-
+```
 This message is from the Client to the Server.
 
 ### route
@@ -111,13 +110,13 @@ and **clientCode** will be assumed to be present unless stated otherwise.
 
 Here is an example connection to a Web Socket (in Perl)
 
-{{< highlight perl >}}
+```php
 use AnyEvent::WebSocket::Client;
 my $client = AnyEvent::WebSocket::Client->new;
 my $connection;
 $client->connect("ws://spacebotwar.com/ws")->cb(sub {
    ...
-{{< /highlight }}
+```
 
 And an example in Javascript
 
