@@ -1,0 +1,67 @@
+/* GET */
+
+article {
+  background: #333;
+}
+
+article a {
+  width: 100%;
+}
+
+article a h2 code b {
+  color: #fff;
+}
+
+article a h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+
+article {
+  clear: both;
+  margin: 15px 0;
+  display: block;
+  overflow: hidden;
+}
+
+article > a {
+  background: #333;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  cursor: pointer;
+  display: block;
+  padding: 15px;
+}
+article > a:hover {
+  background: #222;
+  text-decoration: none;
+}
+
+article {
+  border-color: #e2e7ea;
+}
+
+article code {
+  float: right;
+}
+
+article a h2 code {
+  color: #657e8b;
+}
+
+article a h2 code b {
+  background: #657e8b;
+  text-transform: uppercase;
+}
+
+article.SERVER a h2 code {
+  color: #52ce0e;
+}
+
+article.SERVER a h2 code b {
+  background: #52ce0e;
+}
+

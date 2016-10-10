@@ -130,10 +130,7 @@ ws.onopen = function() {
 
 On making a successful connection the server will send a Welcome message as follows.
 
-
-
-
-{% include section_header.html method="SERVER" url="/welcome" title="Welcome" %}
+{{< section_header  type="SERVER" url="/welcome" title="Welcome" >}}
 
 When a client makes a Web Socket connection, the server will send a message indicating the
 current status. It may also send an update whenever the server status changes.
