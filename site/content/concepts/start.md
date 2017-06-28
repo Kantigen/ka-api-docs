@@ -120,13 +120,12 @@ $client->connect("ws://spacebotwar.com/ws")->cb(sub {
 
 And an example in Javascript
 
-{% highlight javascript %}
+```javascript
 var ws = new WebSocket("ws://spacebotwar.com/ws");
 ws.onopen = function() {
   alert("Connection is open")
 }
-
-{% endhighlight %}
+```
 
 On making a successful connection the server will send a Welcome message as follows.
 
@@ -135,7 +134,7 @@ On making a successful connection the server will send a Welcome message as foll
 When a client makes a Web Socket connection, the server will send a message indicating the
 current status. It may also send an update whenever the server status changes.
 
-{% highlight JSON %}
+```json
 {
   "route"       : "/welcome",
   "status"      : 0,
@@ -145,7 +144,7 @@ current status. It may also send an update whenever the server status changes.
     "offlineSeconds"  : "3060"
   }
 }
-{% endhighlight %}
+```
 
 ### status
 
@@ -162,8 +161,7 @@ Optional additional information, TODO (example is indicative)
 **Note** there will be no **msgId** since this is a Server initiated message.
 
 
-
-{% include section_header.html method="SERVER" url="/{various}" title="Standard Server Response" %}
+{{< section_header  type="SERVER" url="/{various}" title="Standard Server Response" >}}
 
 Although all responses from the Web Socket server are asynchronous, frequently enough
 the server will respond with a simple acknowledgement that the last client request
@@ -175,7 +173,7 @@ the Server sending a message to the client with the same route (**/login**).
 Rather than repeat the server response throughout the API documentation, it will be
 described here and referred to as a **Standard Response**
 
-{% highlight JSON %}
+```json
 {
   "route"       : "/{some_route}",
   "msgId"       : "123",
@@ -185,7 +183,7 @@ described here and referred to as a **Standard Response**
     "example"       : "Some value"
   }
 }
-{% endhighlight %}
+```
 
 ### status
 

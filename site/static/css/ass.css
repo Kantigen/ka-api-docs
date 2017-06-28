@@ -1,4 +1,3 @@
-/* GET */
 
 article {
   background: #333;
@@ -64,4 +63,23 @@ article.SERVER a h2 code {
 article.SERVER a h2 code b {
   background: #52ce0e;
 }
+
+article.CLIENT a h2 code {
+  color: #119bdf;
+}
+
+article.CLIENT a h2 code b {
+  background: #119bdf;
+}
+
+article.MESSAGE a h2 code {
+  color: #e02a10;
+}
+
+article.MESSAGE a h2 code b {
+  background: #e02a10;
+}
+
+
+
 
